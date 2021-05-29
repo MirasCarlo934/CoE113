@@ -57,6 +57,8 @@ module processor_v2
         output [63:0] rf_reg_arr_7,
         output [63:0] rf_reg_arr_8
         
+//        ,output [31:0] IDi_inst
+        
         ,output wren1,
         output wren2,
         output wren3,
@@ -88,7 +90,7 @@ module processor_v2
     reg [7:0] mem_wrmask;
     
     // pipeline registers
-    reg [31:0] IDi_inst;
+    reg [31:0] ID_inst;
     reg [63:0] ALU_op1;
     reg [63:0] ALU_op2;
     reg [63:0] ALU_res;
@@ -172,8 +174,7 @@ module processor_v2
         if (nrst == 1) begin
         
             // WB
-            RFi_wren = MEMf_RF_wren;
-            RFi_rd = MEMf_RF_rd;
+            RFi_wren = MEMf_RF_wren; // RF_wren signal leads the rd signal by 1 cycle for some reason
         
             // MEM
             if (ALUf_RF_data_sel) begin
@@ -183,7 +184,7 @@ module processor_v2
                 RFi_wrdata = rdata;
             end
             MEMf_RF_wren = ALUf_RF_wren;
-            MEMf_RF_rd = ALUf_RF_rd;
+            RFi_rd = ALUf_RF_rd;
         
             // EXE (ALU)
             if (ALU_mode == 0) begin // add
@@ -224,98 +225,111 @@ module processor_v2
                 PCi_pcsrc = 0;
         
             // ID (RF)
-            if (IDi_inst[6:0] == 7'b0000011) begin // load family
+            if (ID_inst[6:0] == 7'b0000011) begin // load family
                 ALU_op1 = RFo_rs1data; // base
-                ALU_op2 = { {52{IDi_inst[31]}},IDi_inst[31:20] }; // offset
+                ALU_op2 = { {52{ID_inst[31]}},ID_inst[31:20] }; // offset
                 ALU_mode = 0; // add
                 IDf_RF_wren = 1; // write back to register
                 IDf_RF_data_sel = 0; // write data from memory
-                IDf_RF_rd = IDi_inst[11:7]; // destination register
+                IDf_RF_rd = ID_inst[11:7]; // destination register
                 IDf_mem_wren = 0; // no write to memory
                 IDf_mem_wrmask = 0; // reset mask
                 IDf_pcsrc = 0; // increment pc
             end
-            else if (IDi_inst[6:0] == 7'b0100011) begin // store family
+            else if (ID_inst[6:0] == 7'b0100011) begin // store family
                 ALU_op1 = RFo_rs1data; // base
-                ALU_op2 = { {52{IDi_inst[31]}}, {IDi_inst[31:25],IDi_inst[11:7]} }; // offset
+                ALU_op2 = { {52{ID_inst[31]}}, {ID_inst[31:25],ID_inst[11:7]} }; // offset
                 IDf_mem_wrdata = RFo_rs2data; // data to store
                 ALU_mode = 0; // add
                 IDf_RF_wren = 0; // no write back to register
                 IDf_mem_wren = 1; // write to memory
                 IDf_pcsrc = 0; // increment pc
-                if (IDi_inst[14:12] == 3'b011) begin // sd
+                if (ID_inst[14:12] == 3'b011) begin // sd
                     IDf_mem_wrmask = 8'hFF; // full mask
                 end
             end
-            else if (IDi_inst[6:0] == 7'b0110011) begin // arith family
+            else if (ID_inst[6:0] == 7'b0110011) begin // arith family
                 ALU_op1 = RFo_rs1data;
                 ALU_op2 = RFo_rs2data;
                 IDf_RF_wren = 1; // write back to register
                 IDf_RF_data_sel = 1; // write data from ALU
-                IDf_RF_rd = IDi_inst[11:7]; // destination register
+                IDf_RF_rd = ID_inst[11:7]; // destination register
                 IDf_mem_wren = 0; // no write to memory
                 IDf_pcsrc = 0; // increment pc
-                if (IDi_inst[14:12] == 3'b000 && IDi_inst[31:25] == 7'b0) begin // add
+                if (ID_inst[14:12] == 3'b000 && ID_inst[31:25] == 7'b0) begin // add
                     ALU_mode = 0;
                 end
-                else if (IDi_inst[14:12] == 3'b000 && IDi_inst[31:25] == 7'b0100000) begin // sub
+                else if (ID_inst[14:12] == 3'b000 && ID_inst[31:25] == 7'b0100000) begin // sub
                     ALU_mode = 1;
                 end
-                else if (IDi_inst[14:12] == 3'b111) begin // and
+                else if (ID_inst[14:12] == 3'b111) begin // and
                     ALU_mode = 2;
                 end
-                else if (IDi_inst[14:12] == 3'b110) begin // or
+                else if (ID_inst[14:12] == 3'b110) begin // or
                     ALU_mode = 3;
                 end
-                else if (IDi_inst[14:12] == 3'b100) begin // xor
+                else if (ID_inst[14:12] == 3'b100) begin // xor
                     ALU_mode = 4;
                 end
-                else if (IDi_inst[14:12] == 3'b010) begin // slt
+                else if (ID_inst[14:12] == 3'b010) begin // slt
                     ALU_mode = 5;
                 end
             end
-            else if (IDi_inst[6:0] == 7'b0010011) begin // addi
+            else if (ID_inst[6:0] == 7'b0010011) begin // addi
                 ALU_op1 = RFo_rs1data;
-                ALU_op2 = { {52{IDi_inst[31]}}, IDi_inst[31:20]};
+                ALU_op2 = { {52{ID_inst[31]}}, ID_inst[31:20]};
                 ALU_mode = 0;
                 IDf_RF_wren = 1; // write back to register
                 IDf_RF_data_sel = 1; // write data from ALU
-                IDf_RF_rd = IDi_inst[11:7]; // destination register
+                IDf_RF_rd = ID_inst[11:7]; // destination register
                 IDf_mem_wren = 0; // no write to memory
                 IDf_pcsrc = 0; // increment pc
             end
-            else if (IDi_inst[6:0] == 7'b1100011) begin // branch family
+            else if (ID_inst[6:0] == 7'b1100011) begin // branch family
                 ALU_op1 = RFo_rs1data;
                 ALU_op2 = RFo_rs2data;
                 ALUi_pc_op1 = IFf_pc;
-                ALUi_pc_op2 = { {52{IDi_inst[31]}}, IDi_inst[31], IDi_inst[7], IDi_inst[30:25], IDi_inst[11:8] } << 1;
+                ALUi_pc_op2 = { {52{ID_inst[31]}}, ID_inst[31], ID_inst[7], ID_inst[30:25], ID_inst[11:8] } << 1;
                 IDf_RF_wren = 0; // no write back to register
                 IDf_mem_wren = 0; // no write to memory
                 IDf_pcsrc = 1; // next pc is computed from ALU
-                if (IDi_inst[14:12] == 3'b000) begin // beq
+                if (ID_inst[14:12] == 3'b000) begin // beq
                     ALU_mode = 6;
                 end
-                else if (IDi_inst[14:12] == 3'b001) begin // bne
+                else if (ID_inst[14:12] == 3'b001) begin // bne
                     ALU_mode = 7;
                 end
             end
-            else if (IDi_inst[6:0] == 7'b1101111) begin // jal
+            else if (ID_inst[6:0] == 7'b1101111) begin // jal
                 ALU_op1 = IFf_pc;
                 ALU_op2 = 4;
                 ALUi_pc_op1 = IFf_pc;
-                ALUi_pc_op2 = { {13{IDi_inst[31]}}, IDi_inst[31], IDi_inst[19:12], IDi_inst[20], IDi_inst[30:21] } << 1;
+                ALUi_pc_op2 = { {13{ID_inst[31]}}, ID_inst[31], ID_inst[19:12], ID_inst[20], ID_inst[30:21], 1'b0 };
                 IDf_RF_wren = 1; // write back to register
                 IDf_RF_data_sel = 1; // write data from ALU
+                IDf_RF_rd = ID_inst[11:7]; // destination register
+                IDf_mem_wren = 0; // no write to memory
+                IDf_pcsrc = 1; // next pc is computed from ALU
+                ALU_mode = 0; // add
+            end
+            else if (ID_inst[6:0] == 7'b1100111) begin // jalr
+                ALU_op1 = IFf_pc;
+                ALU_op2 = 4;
+                ALUi_pc_op1 = RFo_rs1data;
+                ALUi_pc_op2 = { {52{ID_inst[31]}},ID_inst[31:20] };
+                IDf_RF_wren = 1; // write back to register
+                IDf_RF_data_sel = 1; // write data from ALU
+                IDf_RF_rd = ID_inst[11:7]; // destination register
                 IDf_mem_wren = 0; // no write to memory
                 IDf_pcsrc = 1; // next pc is computed from ALU
                 ALU_mode = 0; // add
             end
             
             // IF
-            IDi_inst = inst;
+            ID_inst = inst;
             IFf_pc = pc;
-            RFi_rs1 = IDi_inst[19:15]; // get rs1
-            RFi_rs2 = IDi_inst[24:20]; // get rs2
+            RFi_rs1 = ID_inst[19:15]; // get rs1
+            RFi_rs2 = ID_inst[24:20]; // get rs2
         end
         else begin
             // initialize registers here
@@ -337,7 +351,7 @@ module processor_v2
             mem_wrmask = 0;
             
             // pipeline registers
-            IDi_inst = 0;
+            ID_inst = 0;
             ALU_op1 = 0;
             ALU_op2 = 0;
             ALU_res = 0;
@@ -345,6 +359,7 @@ module processor_v2
             // forwarding registers
             IDf_RF_wren = 0;
             ALUf_RF_wren = 0;
+            MEMf_RF_wren = 0;
             IDf_RF_rd = 0; // RF destination register
             ALUf_RF_rd = 0;
             IDf_mem_wrdata = 0; // memory data-to-write
