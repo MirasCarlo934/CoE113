@@ -247,6 +247,12 @@ module processor_v2
                 if (ID_inst[14:12] == 3'b011) begin // sd
                     IDf_mem_wrmask = 8'hFF; // full mask
                 end
+                if (ID_inst[14:12] == 3'b010) begin // sw
+                    IDf_mem_wrmask = 8'h0F;
+                end
+                if (ID_inst[14:12] == 3'b001) begin // sh
+                    IDf_mem_wrmask = 8'h03;
+                end
             end
             else if (ID_inst[6:0] == 7'b0110011) begin // arith family
                 ALU_op1 = RFo_rs1data;
