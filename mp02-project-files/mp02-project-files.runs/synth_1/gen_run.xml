@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1622516854">
+  <File Type="PA-TCL" Name="processor_v2.tcl"/>
+  <File Type="REPORTS-TCL" Name="processor_v2_reports.tcl"/>
+  <File Type="RDS-RDS" Name="processor_v2.vds"/>
+  <File Type="RDS-UTIL" Name="processor_v2_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="processor_v2_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="processor_v2.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/CoE113_MP1_Miras_Carlo/proc_pc.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/user/OneDrive/UP/2S 2020-2021/CoE 113/MP02/mp02_project_files/mp02_project_files.srcs/sources_1/imports/CoE113_MP1_Miras_Carlo/proc_pc.v"/>
+        <Attr Name="ImportTime" Val="1622094375"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/CoE113_MP1_Miras_Carlo/proc_rf.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/user/OneDrive/UP/2S 2020-2021/CoE 113/MP02/mp02_project_files/mp02_project_files.srcs/sources_1/imports/CoE113_MP1_Miras_Carlo/proc_rf.v"/>
+        <Attr Name="ImportTime" Val="1622046051"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/new/processor_v2.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/user/OneDrive/UP/2S 2020-2021/CoE 113/MP02/mp02_project_files/mp02_project_files.srcs/sources_1/new/processor_v2.v"/>
+        <Attr Name="ImportTime" Val="1622220433"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/memory_model/mem_model.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="C:/Users/user/OneDrive/UP/2S 2020-2021/CoE 113/MP02/mp02_project_files/mp02_project_files.srcs/sources_1/imports/memory_model/mem_model.v"/>
+        <Attr Name="ImportTime" Val="1615803306"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/memory_model/mem_prog.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="C:/Users/user/OneDrive/UP/2S 2020-2021/CoE 113/MP02/mp02_project_files/mp02_project_files.srcs/sources_1/imports/memory_model/mem_prog.v"/>
+        <Attr Name="ImportTime" Val="1615803306"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/memory_model/datamem.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/user/OneDrive/UP/2S 2020-2021/CoE 113/MP02/mp02_project_files/mp02_project_files.srcs/sources_1/imports/memory_model/datamem.mem"/>
+        <Attr Name="ImportTime" Val="1622097094"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/memory_model/progmem.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="C:/Users/user/OneDrive/UP/2S 2020-2021/CoE 113/MP02/mp02_project_files/mp02_project_files.srcs/sources_1/imports/memory_model/progmem.mem"/>
+        <Attr Name="ImportTime" Val="1622220285"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="processor_v2"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
