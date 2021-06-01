@@ -48,29 +48,29 @@ module tb_processor(
     wire RFwren;
     
     // for testing
-    wire [63:0] rf_selected;
-    wire [4:0] rf_testrd;
-    wire rf_wren;
-    wire [63:0] rf_reg_arr_1;
-    wire [63:0] rf_reg_arr_2;
-    wire [63:0] rf_reg_arr_3;
-    wire [63:0] rf_reg_arr_4;
-    wire [63:0] rf_reg_arr_5;
-    wire [63:0] rf_reg_arr_6;
-    wire [63:0] rf_reg_arr_7;
-    wire [63:0] rf_reg_arr_8;
+//    wire [63:0] rf_selected;
+//    wire [4:0] rf_testrd;
+//    wire rf_wren;
+//    wire [63:0] rf_reg_arr_1;
+//    wire [63:0] rf_reg_arr_2;
+//    wire [63:0] rf_reg_arr_3;
+//    wire [63:0] rf_reg_arr_4;
+//    wire [63:0] rf_reg_arr_5;
+//    wire [63:0] rf_reg_arr_6;
+//    wire [63:0] rf_reg_arr_7;
+//    wire [63:0] rf_reg_arr_8;
     
-    wire [31:0] IDi_inst;
+//    wire [31:0] IDi_inst;
     
-    wire wren1;
-    wire wren2;
-    wire wren3;
-    wire wren4;
+//    wire wren1;
+//    wire wren2;
+//    wire wren3;
+//    wire wren4;
     
-    wire [4:0] rd1;
-    wire [4:0] rd2;
-    wire [4:0] rd3;
-    wire [4:0] rd4;
+//    wire [4:0] rd1;
+//    wire [4:0] rd2;
+//    wire [4:0] rd3;
+//    wire [4:0] rd4;
     
     processor_v2 #(DATA_DEP,PROG_ADDR_WID,DATA_ADDR_WID) UUT_proc(
         .clk(clk),
@@ -90,29 +90,29 @@ module tb_processor(
         .RFwren(RFwren)
         
         // for testing
-        ,.rf_selected(rf_selected),
-        .rf_testrd(rf_testrd),
-        .rf_wren(rf_wren),
-        .rf_reg_arr_1(rf_reg_arr_1),
-        .rf_reg_arr_2(rf_reg_arr_2),
-        .rf_reg_arr_3(rf_reg_arr_3),
-        .rf_reg_arr_4(rf_reg_arr_4),
-        .rf_reg_arr_5(rf_reg_arr_6),
-        .rf_reg_arr_6(rf_reg_arr_6),
-        .rf_reg_arr_7(rf_reg_arr_7),
-        .rf_reg_arr_8(rf_reg_arr_8)
+//        ,.rf_selected(rf_selected),
+//        .rf_testrd(rf_testrd),
+//        .rf_wren(rf_wren),
+//        .rf_reg_arr_1(rf_reg_arr_1),
+//        .rf_reg_arr_2(rf_reg_arr_2),
+//        .rf_reg_arr_3(rf_reg_arr_3),
+//        .rf_reg_arr_4(rf_reg_arr_4),
+//        .rf_reg_arr_5(rf_reg_arr_6),
+//        .rf_reg_arr_6(rf_reg_arr_6),
+//        .rf_reg_arr_7(rf_reg_arr_7),
+//        .rf_reg_arr_8(rf_reg_arr_8)
         
-//        ,.IDi_inst(IDi_inst)
+////        ,.IDi_inst(IDi_inst)
         
-        ,.wren1(wren1),
-        .wren2(wren2),
-        .wren3(wren3),
-        .wren4(wren4)
+//        ,.wren1(wren1),
+//        .wren2(wren2),
+//        .wren3(wren3),
+//        .wren4(wren4)
         
-        ,.rd1(rd1),
-        .rd2(rd2),
-        .rd3(rd3),
-        .rd4(rd4)
+//        ,.rd1(rd1),
+//        .rd2(rd2),
+//        .rd3(rd3),
+//        .rd4(rd4)
     );
     
     mem_prog #(DATA_DEP,PROG_ADDR_WID) UUT_progmem(
