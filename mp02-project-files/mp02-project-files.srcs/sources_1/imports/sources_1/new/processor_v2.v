@@ -45,17 +45,19 @@ module processor_v2
         output RFwren
         
         // for testing (RF)
-//        ,output[63:0] rf_selected,
-//        output [4:0] rf_testrd,
-//        output rf_wren,
-//        output [63:0] rf_reg_arr_1,
-//        output [63:0] rf_reg_arr_2,
-//        output [63:0] rf_reg_arr_3,
-//        output [63:0] rf_reg_arr_4,
-//        output [63:0] rf_reg_arr_5,
-//        output [63:0] rf_reg_arr_6,
-//        output [63:0] rf_reg_arr_7,
-//        output [63:0] rf_reg_arr_8
+        ,output[63:0] rf_selected,
+        output [4:0] rf_testrd,
+        output rf_wren,
+        output [63:0] rf_reg_arr_1,
+        output [63:0] rf_reg_arr_2,
+        output [63:0] rf_reg_arr_3,
+        output [63:0] rf_reg_arr_4,
+        output [63:0] rf_reg_arr_5,
+        output [63:0] rf_reg_arr_6,
+        output [63:0] rf_reg_arr_7,
+        output [63:0] rf_reg_arr_8
+        
+        ,output pc_src
         
 ////        ,output [31:0] IDi_inst
         
@@ -112,7 +114,7 @@ module processor_v2
     reg IDf_mem_wren;           // memory write-enable
     reg [7:0] IDf_mem_wrmask;   // memory write mask
     reg IDf_RF_data_sel;        // selector for RF data-to-write
-    reg ALUf_RF_data_sel;       // selector for RF data-to-write
+    reg ALUf_RF_data_sel;       
     reg IDf_pcsrc;              // selector for PC override
     reg [31:0] IFf_pc;          // PC forwarding
     
@@ -138,6 +140,8 @@ module processor_v2
 //    assign rd2 = ALUf_RF_rd;
 //    assign rd3 = MEMf_RF_rd;
 //    assign rd4 = RFi_rd;
+
+    assign pc_src = PCi_pcsrc;
     
     proc_rf RF(
         .clk(clk),
@@ -152,17 +156,17 @@ module processor_v2
         .rdata2(RFo_rs2data)
         
         // for testing
-//        ,.rf_selected(rf_selected),
-//        .rf_testrd(rf_testrd),
-//        .rf_wren(rf_wren),
-//        .rf_reg_arr_1(rf_reg_arr_1),
-//        .rf_reg_arr_2(rf_reg_arr_2),
-//        .rf_reg_arr_3(rf_reg_arr_3),
-//        .rf_reg_arr_4(rf_reg_arr_4),
-//        .rf_reg_arr_5(rf_reg_arr_6),
-//        .rf_reg_arr_6(rf_reg_arr_6),
-//        .rf_reg_arr_7(rf_reg_arr_7),
-//        .rf_reg_arr_8(rf_reg_arr_8)
+        ,.rf_selected(rf_selected),
+        .rf_testrd(rf_testrd),
+        .rf_wren(rf_wren),
+        .rf_reg_arr_1(rf_reg_arr_1),
+        .rf_reg_arr_2(rf_reg_arr_2),
+        .rf_reg_arr_3(rf_reg_arr_3),
+        .rf_reg_arr_4(rf_reg_arr_4),
+        .rf_reg_arr_5(rf_reg_arr_5),
+        .rf_reg_arr_6(rf_reg_arr_6),
+        .rf_reg_arr_7(rf_reg_arr_7),
+        .rf_reg_arr_8(rf_reg_arr_8)
     );
     
     proc_pc PC(
@@ -178,7 +182,7 @@ module processor_v2
         if (nrst == 1) begin
         
             // WB
-            RFi_wren = MEMf_RF_wren; // RF_wren signal leads the rd signal by 1 cycle for some reason
+//            RFi_wren = MEMf_RF_wren; // RF_wren signal leads the rd signal by 1 cycle for some reason
         
             // MEM
             if (ALUf_RF_data_sel) begin
@@ -255,7 +259,8 @@ module processor_v2
                 else if (ALUf_RF_wrmask == 8'h03)
                     RFi_wrdata[63:16] = { 48{RFi_wrdata[15]} };
             end
-            MEMf_RF_wren = ALUf_RF_wren;
+//            MEMf_RF_wren = ALUf_RF_wren;
+            RFi_wren = ALUf_RF_wren;
             RFi_rd = ALUf_RF_rd;
         
             // EXE (ALU)
@@ -462,15 +467,26 @@ module processor_v2
             ALU_op2 = 0;
             ALU_res = 0;
             ALU_mode = 0;
+            ALUi_pc_op1 = 0;
+            ALUi_pc_op2 = 0;
             // forwarding registers
             IDf_RF_wren = 0;
             ALUf_RF_wren = 0;
             MEMf_RF_wren = 0;
-            IDf_RF_rd = 0; // RF destination register
+            IDf_RF_rd = 0;          // RF destination register
             ALUf_RF_rd = 0;
-            IDf_mem_wrdata = 0; // memory data-to-write
-            IDf_mem_wren = 0; // memory write-enable
-            IDf_mem_wrmask = 0; // memory write mask
+            MEMf_RF_rd = 0;
+            IDf_RF_wrmask = 0;      // RF write mask
+            ALUf_RF_wrmask = 0;
+            IDf_RF_u = 0;           // RF write unsigned
+            ALUf_RF_u = 0;
+            IDf_mem_wrdata = 0;     // memory data-to-write
+            IDf_mem_wren = 0;       // memory write-enable
+            IDf_mem_wrmask = 0;     // memory write mask
+            IDf_RF_data_sel = 0;    // selector for RF data-to-write
+            ALUf_RF_data_sel = 0;
+            IDf_pcsrc = 0;          // selector for PC override
+            IFf_pc = 0;      // PC forwarding
         end
     end
     

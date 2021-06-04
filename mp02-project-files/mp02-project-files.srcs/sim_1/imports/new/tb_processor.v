@@ -48,17 +48,19 @@ module tb_processor(
     wire RFwren;
     
     // for testing
-//    wire [63:0] rf_selected;
-//    wire [4:0] rf_testrd;
-//    wire rf_wren;
-//    wire [63:0] rf_reg_arr_1;
-//    wire [63:0] rf_reg_arr_2;
-//    wire [63:0] rf_reg_arr_3;
-//    wire [63:0] rf_reg_arr_4;
-//    wire [63:0] rf_reg_arr_5;
-//    wire [63:0] rf_reg_arr_6;
-//    wire [63:0] rf_reg_arr_7;
-//    wire [63:0] rf_reg_arr_8;
+    wire [63:0] rf_selected;
+    wire [4:0] rf_testrd;
+    wire rf_wren;
+    wire [63:0] rf_reg_arr_1;
+    wire [63:0] rf_reg_arr_2;
+    wire [63:0] rf_reg_arr_3;
+    wire [63:0] rf_reg_arr_4;
+    wire [63:0] rf_reg_arr_5;
+    wire [63:0] rf_reg_arr_6;
+    wire [63:0] rf_reg_arr_7;
+    wire [63:0] rf_reg_arr_8;
+    
+    wire pc_src;
     
 //    wire [31:0] IDi_inst;
     
@@ -90,17 +92,19 @@ module tb_processor(
         .RFwren(RFwren)
         
         // for testing
-//        ,.rf_selected(rf_selected),
-//        .rf_testrd(rf_testrd),
-//        .rf_wren(rf_wren),
-//        .rf_reg_arr_1(rf_reg_arr_1),
-//        .rf_reg_arr_2(rf_reg_arr_2),
-//        .rf_reg_arr_3(rf_reg_arr_3),
-//        .rf_reg_arr_4(rf_reg_arr_4),
-//        .rf_reg_arr_5(rf_reg_arr_6),
-//        .rf_reg_arr_6(rf_reg_arr_6),
-//        .rf_reg_arr_7(rf_reg_arr_7),
-//        .rf_reg_arr_8(rf_reg_arr_8)
+        ,.rf_selected(rf_selected),
+        .rf_testrd(rf_testrd),
+        .rf_wren(rf_wren),
+        .rf_reg_arr_1(rf_reg_arr_1),
+        .rf_reg_arr_2(rf_reg_arr_2),
+        .rf_reg_arr_3(rf_reg_arr_3),
+        .rf_reg_arr_4(rf_reg_arr_4),
+        .rf_reg_arr_5(rf_reg_arr_5),
+        .rf_reg_arr_6(rf_reg_arr_6),
+        .rf_reg_arr_7(rf_reg_arr_7),
+        .rf_reg_arr_8(rf_reg_arr_8)
+        
+        ,.pc_src(pc_src)
         
 ////        ,.IDi_inst(IDi_inst)
         

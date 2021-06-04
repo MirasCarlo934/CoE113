@@ -38,23 +38,23 @@ module tb_processor;
     wire [63:0] rdata;
     
     // for testing
-    wire [63:0] rf_testrd;
-    wire [63:0] rf_reg_arr_1;
-    wire [63:0] rf_reg_arr_2;
-    wire [63:0] rf_reg_arr_3;
-    wire [63:0] rf_reg_arr_4;
-    wire [63:0] rf_reg_arr_5;
-    wire [63:0] rf_reg_arr_6;
-    wire [63:0] rf_reg_arr_7;
-    wire [63:0] rf_reg_arr_8;
-    wire [63:0] mem_0;
-    wire [63:0] mem_1;
-    wire [63:0] mem_2;
-    wire [63:0] mem_3;
-    wire [63:0] mem_4;
-    wire [63:0] mem_5;
-    wire [63:0] mem_6;
-    wire [63:0] mem_7;
+//    wire [63:0] rf_testrd;
+//    wire [63:0] rf_reg_arr_1;
+//    wire [63:0] rf_reg_arr_2;
+//    wire [63:0] rf_reg_arr_3;
+//    wire [63:0] rf_reg_arr_4;
+//    wire [63:0] rf_reg_arr_5;
+//    wire [63:0] rf_reg_arr_6;
+//    wire [63:0] rf_reg_arr_7;
+//    wire [63:0] rf_reg_arr_8;
+//    wire [63:0] mem_0;
+//    wire [63:0] mem_1;
+//    wire [63:0] mem_2;
+//    wire [63:0] mem_3;
+//    wire [63:0] mem_4;
+//    wire [63:0] mem_5;
+//    wire [63:0] mem_6;
+//    wire [63:0] mem_7;
     
     processor #(DATA_DEP,PROG_ADDR_WID,DATA_ADDR_WID) UUT_proc(
         .clk(clk),
@@ -68,15 +68,15 @@ module tb_processor;
         .wmask(wmask)
         
         // for testing
-        ,.rf_testrd(rf_testrd),
-        .rf_reg_arr_1(rf_reg_arr_1),
-        .rf_reg_arr_2(rf_reg_arr_2),
-        .rf_reg_arr_3(rf_reg_arr_3),
-        .rf_reg_arr_4(rf_reg_arr_4),
-        .rf_reg_arr_5(rf_reg_arr_6),
-        .rf_reg_arr_6(rf_reg_arr_6),
-        .rf_reg_arr_7(rf_reg_arr_7),
-        .rf_reg_arr_8(rf_reg_arr_8)
+//        ,.rf_testrd(rf_testrd),
+//        .rf_reg_arr_1(rf_reg_arr_1),
+//        .rf_reg_arr_2(rf_reg_arr_2),
+//        .rf_reg_arr_3(rf_reg_arr_3),
+//        .rf_reg_arr_4(rf_reg_arr_4),
+//        .rf_reg_arr_5(rf_reg_arr_5),
+//        .rf_reg_arr_6(rf_reg_arr_6),
+//        .rf_reg_arr_7(rf_reg_arr_7),
+//        .rf_reg_arr_8(rf_reg_arr_8)
     );
     
     mem_prog #(DATA_DEP,PROG_ADDR_WID) UUT_progmem(
@@ -93,14 +93,14 @@ module tb_processor;
         .wmask(wmask)
         
         // for testing
-        ,.mem_0(mem_0),
-        .mem_1(mem_1),
-        .mem_2(mem_2),
-        .mem_3(mem_3),
-        .mem_4(mem_4),
-        .mem_5(mem_5),
-        .mem_6(mem_6),
-        .mem_7(mem_7)
+//        ,.mem_0(mem_0),
+//        .mem_1(mem_1),
+//        .mem_2(mem_2),
+//        .mem_3(mem_3),
+//        .mem_4(mem_4),
+//        .mem_5(mem_5),
+//        .mem_6(mem_6),
+//        .mem_7(mem_7)
     );
     
     always
