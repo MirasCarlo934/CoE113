@@ -32,7 +32,7 @@ module proc_pc(
     
     assign pc = r_pc;
     
-    always@(posedge clk or posedge pc_src or negedge pc_src) begin
+    always@(posedge clk /* or posedge pc_src or negedge pc_src*/) begin
         if (nrst == 1) begin
             if (pc_src == 1) begin  
                 r_pc = new_pc;
