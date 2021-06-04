@@ -45,19 +45,19 @@ module processor_v2
         output RFwren
         
         // for testing (RF)
-        ,output[63:0] rf_selected,
-        output [4:0] rf_testrd,
-        output rf_wren,
-        output [63:0] rf_reg_arr_1,
-        output [63:0] rf_reg_arr_2,
-        output [63:0] rf_reg_arr_3,
-        output [63:0] rf_reg_arr_4,
-        output [63:0] rf_reg_arr_5,
-        output [63:0] rf_reg_arr_6,
-        output [63:0] rf_reg_arr_7,
-        output [63:0] rf_reg_arr_8
+//        ,output[63:0] rf_selected,
+//        output [4:0] rf_testrd,
+//        output rf_wren,
+//        output [63:0] rf_reg_arr_1,
+//        output [63:0] rf_reg_arr_2,
+//        output [63:0] rf_reg_arr_3,
+//        output [63:0] rf_reg_arr_4,
+//        output [63:0] rf_reg_arr_5,
+//        output [63:0] rf_reg_arr_6,
+//        output [63:0] rf_reg_arr_7,
+//        output [63:0] rf_reg_arr_8
         
-        ,output pc_src
+//        ,output pc_src
         
 ////        ,output [31:0] IDi_inst
         
@@ -138,7 +138,7 @@ module processor_v2
 //    assign rd3 = MEMf_RF_rd;
 //    assign rd4 = RFi_rd;
 
-    assign pc_src = PCi_pcsrc;
+//    assign pc_src = PCi_pcsrc;
     
     proc_rf RF(
         .clk(clk),
@@ -153,17 +153,17 @@ module processor_v2
         .rdata2(RFo_rs2data)
         
         // for testing
-        ,.rf_selected(rf_selected),
-        .rf_testrd(rf_testrd),
-        .rf_wren(rf_wren),
-        .rf_reg_arr_1(rf_reg_arr_1),
-        .rf_reg_arr_2(rf_reg_arr_2),
-        .rf_reg_arr_3(rf_reg_arr_3),
-        .rf_reg_arr_4(rf_reg_arr_4),
-        .rf_reg_arr_5(rf_reg_arr_5),
-        .rf_reg_arr_6(rf_reg_arr_6),
-        .rf_reg_arr_7(rf_reg_arr_7),
-        .rf_reg_arr_8(rf_reg_arr_8)
+//        ,.rf_selected(rf_selected),
+//        .rf_testrd(rf_testrd),
+//        .rf_wren(rf_wren),
+//        .rf_reg_arr_1(rf_reg_arr_1),
+//        .rf_reg_arr_2(rf_reg_arr_2),
+//        .rf_reg_arr_3(rf_reg_arr_3),
+//        .rf_reg_arr_4(rf_reg_arr_4),
+//        .rf_reg_arr_5(rf_reg_arr_5),
+//        .rf_reg_arr_6(rf_reg_arr_6),
+//        .rf_reg_arr_7(rf_reg_arr_7),
+//        .rf_reg_arr_8(rf_reg_arr_8)
     );
     
     proc_pc PC(

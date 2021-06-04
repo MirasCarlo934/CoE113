@@ -92,19 +92,19 @@ module tb_processor(
         .RFwren(RFwren)
         
         // for testing
-        ,.rf_selected(rf_selected),
-        .rf_testrd(rf_testrd),
-        .rf_wren(rf_wren),
-        .rf_reg_arr_1(rf_reg_arr_1),
-        .rf_reg_arr_2(rf_reg_arr_2),
-        .rf_reg_arr_3(rf_reg_arr_3),
-        .rf_reg_arr_4(rf_reg_arr_4),
-        .rf_reg_arr_5(rf_reg_arr_5),
-        .rf_reg_arr_6(rf_reg_arr_6),
-        .rf_reg_arr_7(rf_reg_arr_7),
-        .rf_reg_arr_8(rf_reg_arr_8)
+//        ,.rf_selected(rf_selected),
+//        .rf_testrd(rf_testrd),
+//        .rf_wren(rf_wren),
+//        .rf_reg_arr_1(rf_reg_arr_1),
+//        .rf_reg_arr_2(rf_reg_arr_2),
+//        .rf_reg_arr_3(rf_reg_arr_3),
+//        .rf_reg_arr_4(rf_reg_arr_4),
+//        .rf_reg_arr_5(rf_reg_arr_5),
+//        .rf_reg_arr_6(rf_reg_arr_6),
+//        .rf_reg_arr_7(rf_reg_arr_7),
+//        .rf_reg_arr_8(rf_reg_arr_8)
         
-        ,.pc_src(pc_src)
+//        ,.pc_src(pc_src)
         
 ////        ,.IDi_inst(IDi_inst)
         

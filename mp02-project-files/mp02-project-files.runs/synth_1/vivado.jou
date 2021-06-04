@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Jun  4 22:31:17 2021
-# Process ID: 11504
+# Start of session at: Fri Jun  4 22:59:23 2021
+# Process ID: 22548
 # Current directory: D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.runs/synth_1
 # Command line: vivado.exe -log processor_v2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source processor_v2.tcl
 # Log file: D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.runs/synth_1/processor_v2.vds
