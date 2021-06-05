@@ -65,7 +65,7 @@ module proc_rf(
     
     always@(posedge clk) begin
         if (nrst == 1) begin
-            if (reg_write == 1) begin
+            if (reg_write == 1 && rd != 0) begin
                 reg_arr[rd] = wdata;
             end
         end

@@ -45,7 +45,7 @@ module proc_rf(
 //    output [63:0] rf_reg_arr_8
     );
     integer regs_i;
-    reg [63:0] reg_arr [4:0];
+    reg [63:0] reg_arr [31:0];
     
     assign rdata1 = reg_arr[rs1];
     assign rdata2 = reg_arr[rs2];
