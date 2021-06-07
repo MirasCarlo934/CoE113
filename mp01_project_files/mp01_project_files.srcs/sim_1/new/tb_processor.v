@@ -39,6 +39,7 @@ module tb_processor;
     
     // for testing
 //    wire [63:0] rf_testrd;
+//    wire [63:0] rf_reg_arr_0;
 //    wire [63:0] rf_reg_arr_1;
 //    wire [63:0] rf_reg_arr_2;
 //    wire [63:0] rf_reg_arr_3;
@@ -69,6 +70,7 @@ module tb_processor;
         
         // for testing
 //        ,.rf_testrd(rf_testrd),
+//        .rf_reg_arr_0(rf_reg_arr_0),
 //        .rf_reg_arr_1(rf_reg_arr_1),
 //        .rf_reg_arr_2(rf_reg_arr_2),
 //        .rf_reg_arr_3(rf_reg_arr_3),

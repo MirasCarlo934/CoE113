@@ -40,6 +40,7 @@ module processor
         
         // for testing
 //        ,output [63:0] rf_testrd,
+//        output [63:0] rf_reg_arr_0,
 //        output [63:0] rf_reg_arr_1,
 //        output [63:0] rf_reg_arr_2,
 //        output [63:0] rf_reg_arr_3,
@@ -96,6 +97,7 @@ module processor
         
         // for testing
 //        ,.rf_testrd(rf_testrd),
+//        .rf_reg_arr_0(rf_reg_arr_0),
 //        .rf_reg_arr_1(rf_reg_arr_1),
 //        .rf_reg_arr_2(rf_reg_arr_2),
 //        .rf_reg_arr_3(rf_reg_arr_3),
@@ -187,7 +189,7 @@ module processor
                     rf_wdata = rf_rdata1 ^ rf_rdata2;
                 end
                 else if (inst[14:12] == 3'b010) begin // slt
-                    if (rs1 < rs2) rf_wdata = 1;
+                    if ($signed(rs1) < $signed(rs2)) rf_wdata = 1;
                     else rf_wdata = 0;
                 end
             end

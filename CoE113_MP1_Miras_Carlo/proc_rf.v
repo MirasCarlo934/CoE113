@@ -33,6 +33,7 @@ module proc_rf(
     
     // for testing
 //    ,output [63:0] rf_testrd,
+//    output [63:0] rf_reg_arr_0,
 //    output [63:0] rf_reg_arr_1,
 //    output [63:0] rf_reg_arr_2,
 //    output [63:0] rf_reg_arr_3,
@@ -51,6 +52,7 @@ module proc_rf(
     
     // for testing
 //    assign rf_testrd = reg_arr[rd];
+//    assign rf_reg_arr_0 = reg_arr[0];
 //    assign rf_reg_arr_1 = reg_arr[1];
 //    assign rf_reg_arr_2 = reg_arr[2];
 //    assign rf_reg_arr_3 = reg_arr[3];
@@ -59,10 +61,17 @@ module proc_rf(
 //    assign rf_reg_arr_6 = reg_arr[6];
 //    assign rf_reg_arr_7 = reg_arr[7];
 //    assign rf_reg_arr_8 = reg_arr[8];
+
+    initial begin
+        for (regs_i = 0; regs_i < 32; regs_i = regs_i + 1) begin
+            reg_arr[regs_i] = 0;
+//                $display("%d: %d", regs_i, reg_arr[regs_i]);
+        end
+    end
     
     always@(posedge clk) begin
         if (nrst == 1) begin
-            if (reg_write == 1) begin
+            if (reg_write == 1 && rd != 0) begin
                 reg_arr[rd] = wdata;
             end
         end
