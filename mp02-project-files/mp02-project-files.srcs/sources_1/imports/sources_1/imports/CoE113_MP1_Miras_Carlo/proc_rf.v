@@ -35,6 +35,7 @@ module proc_rf(
 //    ,output[63:0] rf_selected,
 //    output [4:0] rf_testrd,
 //    output rf_wren,
+//    output [63:0] rf_reg_arr_0,
 //    output [63:0] rf_reg_arr_1,
 //    output [63:0] rf_reg_arr_2,
 //    output [63:0] rf_reg_arr_3,
@@ -54,6 +55,7 @@ module proc_rf(
 //    assign rf_selected = reg_arr[rd];
 //    assign rf_testrd = rd;
 //    assign rf_wren = reg_write;
+//    assign rf_reg_arr_0 = reg_arr[0];
 //    assign rf_reg_arr_1 = reg_arr[1];
 //    assign rf_reg_arr_2 = reg_arr[2];
 //    assign rf_reg_arr_3 = reg_arr[3];

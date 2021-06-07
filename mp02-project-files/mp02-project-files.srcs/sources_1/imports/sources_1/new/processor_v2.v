@@ -48,6 +48,7 @@ module processor_v2
 //        ,output[63:0] rf_selected,
 //        output [4:0] rf_testrd,
 //        output rf_wren,
+//        output [63:0] rf_reg_arr_0,
 //        output [63:0] rf_reg_arr_1,
 //        output [63:0] rf_reg_arr_2,
 //        output [63:0] rf_reg_arr_3,
@@ -156,6 +157,7 @@ module processor_v2
 //        ,.rf_selected(rf_selected),
 //        .rf_testrd(rf_testrd),
 //        .rf_wren(rf_wren),
+//        .rf_reg_arr_0(rf_reg_arr_0),
 //        .rf_reg_arr_1(rf_reg_arr_1),
 //        .rf_reg_arr_2(rf_reg_arr_2),
 //        .rf_reg_arr_3(rf_reg_arr_3),
@@ -277,7 +279,7 @@ module processor_v2
                 ALU_res = ALU_op1 ^ ALU_op2;
             end
             else if (ALU_mode == 5) begin // slt
-                ALU_res = ALU_op1 < ALU_op2;
+                ALU_res = $signed(ALU_op1) < $signed(ALU_op2);
             end
             mem_addr = { ALU_res[31:3], 3'd0 };
             mem_wrdata = IDf_mem_wrdata;

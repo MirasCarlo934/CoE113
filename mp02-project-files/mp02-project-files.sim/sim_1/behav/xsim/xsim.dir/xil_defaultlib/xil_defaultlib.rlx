@@ -3,9 +3,9 @@
 May 27 2020
 20:09:33
 D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
-D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sim_1/imports/new/tb_processor.v,1622815961,verilog,,,,tb_processor,,,,,,,,
+D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sim_1/imports/new/tb_processor.v,1623035357,verilog,,,,tb_processor,,,,,,,,
 D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/imports/CoE113_MP1_Miras_Carlo/proc_pc.v,1622816866,verilog,,D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/imports/CoE113_MP1_Miras_Carlo/proc_rf.v,,proc_pc,,,,,,,,
-D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/imports/CoE113_MP1_Miras_Carlo/proc_rf.v,1622818529,verilog,,D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/new/processor_v2.v,,proc_rf,,,,,,,,
+D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/imports/CoE113_MP1_Miras_Carlo/proc_rf.v,1623035317,verilog,,D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/new/processor_v2.v,,proc_rf,,,,,,,,
 D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/imports/memory_model/mem_model.v,1615803306,verilog,,D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/imports/memory_model/mem_prog.v,,mem_model,,,,,,,,
 D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/imports/memory_model/mem_prog.v,1615803306,verilog,,D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/imports/CoE113_MP1_Miras_Carlo/proc_pc.v,,mem_prog,,,,,,,,
-D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/new/processor_v2.v,1622818485,verilog,,D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sim_1/imports/new/tb_processor.v,,processor_v2,,,,,,,,
+D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/new/processor_v2.v,1623035298,verilog,,D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sim_1/imports/new/tb_processor.v,,processor_v2,,,,,,,,
