@@ -2,8 +2,8 @@
 # Webtalk v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Jun  7 11:02:01 2021
-# Process ID: 10668
+# Start of session at: Wed Jun  9 13:44:15 2021
+# Process ID: 27492
 # Current directory: D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.sim/sim_1/behav/xsim/xsim.dir/tb_processor_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.sim/sim_1/behav/xsim/webtalk.log
