@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticsg324-1L
 
@@ -90,6 +89,15 @@ OPTRACE "Adding files" START { }
 read_mem {
   D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/imports/memory_model/datamem.mem
   D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/imports/memory_model/progmem.mem
+  D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/mp02-test/arithtest.mem
+  D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/mp02-test/brtest.mem
+  D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/mp02-test/jtest.mem
+  D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/mp02-test/jtest_data.mem
+  D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/mp02-test/looptest.mem
+  D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/mp02-test/ldtest_data.mem
+  D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/mp02-test/brtest_data.mem
+  D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/mp02-test/arithtest_data.mem
+  D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/mp02-test/looptest_data.mem
 }
 read_verilog -library xil_defaultlib {
   D:/carlo/git/CoE113/mp02-project-files/mp02-project-files.srcs/sources_1/imports/sources_1/imports/CoE113_MP1_Miras_Carlo/proc_pc.v

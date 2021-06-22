@@ -264,10 +264,10 @@ module processor_v2
         
             // EXE (ALU)
             if (ALU_mode == 0) begin // add
-                ALU_res = ALU_op1 + ALU_op2;
+                ALU_res = $signed(ALU_op1) + $signed(ALU_op2);
             end
             else if (ALU_mode == 1) begin // subtract
-                ALU_res = ALU_op1 - ALU_op2;
+                ALU_res = $signed(ALU_op1) - $signed(ALU_op2);
             end
             else if (ALU_mode == 2) begin // and
                 ALU_res = ALU_op1 & ALU_op2;
@@ -418,6 +418,17 @@ module processor_v2
                 ALU_mode = 0; // add
                 PCi_newpc = RFo_rs1data + { {52{ID_inst[31]}},ID_inst[31:20] };
                 PCi_pcsrc = 1;
+            end
+            else begin // undefined instruction
+                IDf_RF_wren = 0;
+                IDf_RF_rd = 0;
+                IDf_RF_wrmask = 0;
+                IDf_RF_u = 0;
+                IDf_mem_wrdata = 0;
+                IDf_mem_wren = 0;
+                IDf_mem_wrmask = 0;
+                IDf_RF_data_sel = 0;
+                PCi_pcsrc = 0; // increment pc
             end
             
             // IF

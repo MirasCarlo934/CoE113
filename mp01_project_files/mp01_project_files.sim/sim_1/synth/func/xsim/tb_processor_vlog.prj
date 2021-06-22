@@ -1,9 +1,9 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "tb_processor_func_synth.v" \
-"../../../../../mp02_project_files.srcs/sources_1/imports/memory_model/mem_model.v" \
-"../../../../../mp02_project_files.srcs/sources_1/imports/memory_model/mem_prog.v" \
-"../../../../../mp02_project_files.srcs/sim_1/new/tb_processor.v" \
+"../../../../../mp01_project_files.srcs/sources_1/imports/memory_model/mem_model.v" \
+"../../../../../mp01_project_files.srcs/sources_1/imports/memory_model/mem_prog.v" \
+"../../../../../mp01_project_files.srcs/sim_1/new/tb_processor.v" \
 
 # Do not sort compile order
 nosort

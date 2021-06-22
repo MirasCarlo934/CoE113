@@ -1,0 +1,8 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.sim/sim_1/synth/func/xsim/tb_processor_func_synth.v,1623600629,verilog,,D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/imports/memory_model/mem_model.v,,glbl;proc_pc;proc_rf;processor,,,,,,,,
+D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sim_1/new/tb_processor.v,1623034310,verilog,,,,tb_processor,,,,,,,,
+D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/imports/memory_model/mem_model.v,1623599472,verilog,,D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/imports/memory_model/mem_prog.v,,mem_model,,,,,,,,
+D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/imports/memory_model/mem_prog.v,1623599459,verilog,,D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sim_1/new/tb_processor.v,,mem_prog,,,,,,,,

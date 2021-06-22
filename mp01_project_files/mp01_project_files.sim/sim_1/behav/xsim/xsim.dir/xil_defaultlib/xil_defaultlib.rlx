@@ -3,9 +3,9 @@
 May 27 2020
 20:09:33
 D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
-D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sim_1/new/tb_processor.v,1623034046,verilog,,,,tb_processor,,,,,,,,
-D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/imports/memory_model/mem_model.v,1622551453,verilog,,D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/imports/memory_model/mem_prog.v,,mem_model,,,,,,,,
-D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/imports/memory_model/mem_prog.v,1615803306,verilog,,D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/proc_pc.v,,mem_prog,,,,,,,,
+D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sim_1/new/tb_processor.v,1623034310,verilog,,,,tb_processor,,,,,,,,
+D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/imports/memory_model/mem_model.v,1623599472,verilog,,D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/imports/memory_model/mem_prog.v,,mem_model,,,,,,,,
+D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/imports/memory_model/mem_prog.v,1623599459,verilog,,D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/proc_pc.v,,mem_prog,,,,,,,,
 D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/proc_pc.v,1622555728,verilog,,D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/proc_rf.v,,proc_pc,,,,,,,,
-D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/proc_rf.v,1623033939,verilog,,D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v,,proc_rf,,,,,,,,
-D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v,1623033997,verilog,,D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sim_1/new/tb_processor.v,,processor,,,,,,,,
+D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/proc_rf.v,1623034279,verilog,,D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v,,proc_rf,,,,,,,,
+D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v,1623596567,verilog,,D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sim_1/new/tb_processor.v,,processor,,,,,,,,

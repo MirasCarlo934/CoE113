@@ -39,7 +39,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="arty-a7-35"/>
-    <Option Name="WTXSimLaunchSim" Val="136"/>
+    <Option Name="WTXSimLaunchSim" Val="168"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -131,6 +131,78 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/mp02-test/arithtest.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/arithtest.mem"/>
+          <Attr Name="ImportTime" Val="1623643924"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/mp02-test/brtest.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/brtest.mem"/>
+          <Attr Name="ImportTime" Val="1623597467"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/mp02-test/jtest.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/jtest.mem"/>
+          <Attr Name="ImportTime" Val="1623598290"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/mp02-test/jtest_data.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/jtest_data.mem"/>
+          <Attr Name="ImportTime" Val="1623591285"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/mp02-test/looptest.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/looptest.mem"/>
+          <Attr Name="ImportTime" Val="1623599440"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/mp02-test/ldtest_data.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/ldtest_data.mem"/>
+          <Attr Name="ImportTime" Val="1623591285"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/mp02-test/brtest_data.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/brtest_data.mem"/>
+          <Attr Name="ImportTime" Val="1623591285"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/mp02-test/arithtest_data.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/arithtest_data.mem"/>
+          <Attr Name="ImportTime" Val="1623591285"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/mp02-test/looptest_data.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/looptest_data.mem"/>
+          <Attr Name="ImportTime" Val="1623591285"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="processor_v2"/>
@@ -162,6 +234,7 @@
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
+        <Option Name="SimMode" Val="post-synthesis"/>
         <Option Name="PamDesignTestbench" Val=""/>
         <Option Name="PamDutBypassFile" Val="xil_dut_bypass"/>
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>

@@ -23,7 +23,9 @@ module mem_prog
     
     /* Initialization */
     initial begin
-        $readmemh("progmem.mem",memdata);
+//        $readmemh("progmem.mem",memdata);
+//        $readmemh("arithtest.mem",memdata);
+        $readmemh("brtest.mem",memdata);
     end
         
 endmodule

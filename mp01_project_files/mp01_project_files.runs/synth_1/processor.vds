@@ -2,12 +2,12 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Jun  1 22:36:17 2021
-# Process ID: 27124
-# Current directory: D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.runs/synth_1
+# Start of session at: Mon Jun 14 00:05:16 2021
+# Process ID: 13288
+# Current directory: D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.runs/synth_1
 # Command line: vivado.exe -log processor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source processor.tcl
-# Log file: D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.runs/synth_1/processor.vds
-# Journal file: D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.runs/synth_1\vivado.jou
+# Log file: D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.runs/synth_1/processor.vds
+# Journal file: D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source processor.tcl -notrace
 Command: synth_design -top processor -part xc7a35ticsg324-1L
@@ -16,47 +16,47 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 32828
+INFO: [Synth 8-7075] Helper process launched with PID 18756
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'processor' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:23]
+INFO: [Synth 8-6157] synthesizing module 'processor' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:23]
 	Parameter DATA_DEP bound to: 512 - type: integer 
 	Parameter PROG_ADDR_WID bound to: 30 - type: integer 
 	Parameter DATA_ADDR_WID bound to: 29 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'proc_pc' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/proc_pc.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'proc_pc' (1#1) [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/proc_pc.v:23]
-INFO: [Synth 8-6157] synthesizing module 'proc_rf' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/proc_rf.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'proc_rf' (2#1) [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/proc_rf.v:23]
-INFO: [Synth 8-251] x = x [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:212]
-INFO: [Synth 8-6155] done synthesizing module 'processor' (3#1) [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:23]
+INFO: [Synth 8-6157] synthesizing module 'proc_pc' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/proc_pc.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'proc_pc' (1#1) [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/proc_pc.v:23]
+INFO: [Synth 8-6157] synthesizing module 'proc_rf' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/proc_rf.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'proc_rf' (2#1) [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/proc_rf.v:23]
+INFO: [Synth 8-251] x = x [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:214]
+INFO: [Synth 8-6155] done synthesizing module 'processor' (3#1) [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:23]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticsg324-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1033.082 ; gain = 0.000
----------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
-WARNING: [Synth 8-327] inferring latch for variable 'r_addr_reg' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:73]
-WARNING: [Synth 8-327] inferring latch for variable 'r_wr_en_reg' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:74]
-WARNING: [Synth 8-327] inferring latch for variable 'r_wdata_reg' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:75]
-WARNING: [Synth 8-327] inferring latch for variable 'r_wmask_reg' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'reg_new_pc_reg' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:81]
-WARNING: [Synth 8-327] inferring latch for variable 'reg_pc_src_reg' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'reg_write_reg' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'rs1_reg' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:90]
-WARNING: [Synth 8-327] inferring latch for variable 'rs2_reg' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:91]
-WARNING: [Synth 8-327] inferring latch for variable 'rd_reg' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:92]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_wdata_reg' [D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.srcs/sources_1/new/processor.v:93]
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1033.082 ; gain = 0.000
+WARNING: [Synth 8-327] inferring latch for variable 'r_addr_reg' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:74]
+WARNING: [Synth 8-327] inferring latch for variable 'r_wr_en_reg' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:75]
+WARNING: [Synth 8-327] inferring latch for variable 'r_wdata_reg' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'r_wmask_reg' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_new_pc_reg' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_pc_src_reg' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_write_reg' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:90]
+WARNING: [Synth 8-327] inferring latch for variable 'rs1_reg' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:91]
+WARNING: [Synth 8-327] inferring latch for variable 'rs2_reg' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:92]
+WARNING: [Synth 8-327] inferring latch for variable 'rd_reg' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_wdata_reg' [D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.srcs/sources_1/new/processor.v:94]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -105,20 +105,20 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -136,37 +136,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -182,16 +182,16 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     5|
-|2     |CARRY4 |   108|
-|3     |LUT1   |    41|
-|4     |LUT2   |   342|
-|5     |LUT3   |    67|
-|6     |LUT4   |    17|
-|7     |LUT5   |   129|
-|8     |LUT6   |  1399|
+|1     |BUFG   |     6|
+|2     |CARRY4 |   116|
+|3     |LUT1   |    39|
+|4     |LUT2   |   395|
+|5     |LUT3   |    44|
+|6     |LUT4   |   173|
+|7     |LUT5   |   168|
+|8     |LUT6   |  1295|
 |9     |MUXF7  |   512|
-|10    |FDRE   |  2080|
+|10    |FDRE   |  2016|
 |11    |LD     |   107|
 |12    |LDC    |   112|
 |13    |LDP    |     1|
@@ -203,24 +203,24 @@ Report Instance Areas:
 +------+---------+--------+------+
 |      |Instance |Module  |Cells |
 +------+---------+--------+------+
-|1     |top      |        |  5155|
+|1     |top      |        |  5219|
 |2     |  PC     |proc_pc |   196|
-|3     |  RF     |proc_rf |  4318|
+|3     |  RF     |proc_rf |  4261|
 +------+---------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1032.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1033.082 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1033.082 ; gain = 0.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1032.680 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1032.680 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1033.082 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 840 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.075 . Memory (MB): peak = 1032.680 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 848 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'processor' is not ideal for floorplanning, since the cellview 'proc_rf' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1069.359 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1070.023 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 220 instances were transformed.
   LD => LDCE: 107 instances
@@ -230,7 +230,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 19 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1069.359 ; gain = 36.277
-INFO: [Common 17-1381] The checkpoint 'D:/carlo/git/CoE113/mp01_project_files/mp02_project_files.runs/synth_1/processor.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 1070.023 ; gain = 37.344
+INFO: [Common 17-1381] The checkpoint 'D:/carlo/git/CoE113/mp01_project_files/mp01_project_files.runs/synth_1/processor.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file processor_utilization_synth.rpt -pb processor_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  1 22:37:01 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 14 00:06:09 2021...

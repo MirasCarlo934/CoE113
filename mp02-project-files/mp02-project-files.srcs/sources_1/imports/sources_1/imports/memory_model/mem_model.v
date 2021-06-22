@@ -50,7 +50,9 @@ module mem_model
     
     /* Initialization */
     initial begin
-        $readmemh("datamem.mem",memdata);
+//        $readmemh("datamem.mem",memdata);
+//        $readmemh("arithtest_data.mem",memdata);
+        $readmemh("brtest_data.mem",memdata);
     end
         
 endmodule

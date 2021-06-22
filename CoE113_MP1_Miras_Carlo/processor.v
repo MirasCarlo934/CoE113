@@ -177,7 +177,7 @@ module processor
                     rf_wdata = rf_rdata1 + rf_rdata2;
                 end
                 else if (inst[14:12] == 3'b0 && inst[31:25] == 7'b0100000) begin // sub
-                    rf_wdata = rf_rdata1 - rf_rdata2;
+                    rf_wdata = $signed(rf_rdata1) - $signed(rf_rdata2);
                 end
                 else if (inst[14:12] == 3'b111) begin // and
                     rf_wdata = rf_rdata1 & rf_rdata2;
@@ -189,7 +189,7 @@ module processor
                     rf_wdata = rf_rdata1 ^ rf_rdata2;
                 end
                 else if (inst[14:12] == 3'b010) begin // slt
-                    if ($signed(rs1) < $signed(rs2)) rf_wdata = 1;
+                    if ($signed(rf_rdata1) < $signed(rf_rdata2)) rf_wdata = 1;
                     else rf_wdata = 0;
                 end
             end

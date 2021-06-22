@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1623035132">
+<GenRun Id="synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1624354023">
   <File Type="PA-TCL" Name="processor_v2.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="processor_v2_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="processor_v2_reports.tcl"/>
@@ -70,6 +70,78 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="C:/Users/user/OneDrive/UP/2S 2020-2021/CoE 113/MP02/mp02_project_files/mp02_project_files.srcs/sources_1/imports/memory_model/progmem.mem"/>
         <Attr Name="ImportTime" Val="1622220285"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mp02-test/arithtest.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/arithtest.mem"/>
+        <Attr Name="ImportTime" Val="1623643924"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mp02-test/brtest.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/brtest.mem"/>
+        <Attr Name="ImportTime" Val="1623597467"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mp02-test/jtest.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/jtest.mem"/>
+        <Attr Name="ImportTime" Val="1623598290"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mp02-test/jtest_data.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/jtest_data.mem"/>
+        <Attr Name="ImportTime" Val="1623591285"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mp02-test/looptest.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/looptest.mem"/>
+        <Attr Name="ImportTime" Val="1623599440"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mp02-test/ldtest_data.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/ldtest_data.mem"/>
+        <Attr Name="ImportTime" Val="1623591285"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mp02-test/brtest_data.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/brtest_data.mem"/>
+        <Attr Name="ImportTime" Val="1623591285"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mp02-test/arithtest_data.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/arithtest_data.mem"/>
+        <Attr Name="ImportTime" Val="1623591285"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mp02-test/looptest_data.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../mp02-test/looptest_data.mem"/>
+        <Attr Name="ImportTime" Val="1623591285"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
